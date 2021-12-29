@@ -440,10 +440,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: fixed;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .-z-20 {
   z-index: -20;
 }
@@ -480,10 +476,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   place-content: center;
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .bg-slate-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
@@ -495,18 +487,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-bungee {
   font-family: Bungee, cursive;
-}
-
-.text-\[70px\] {
-  font-size: 70px;
-}
-
-.text-\[60px\] {
-  font-size: 60px;
-}
-
-.text-\[65px\] {
-  font-size: 65px;
 }
 
 .text-\[50px\] {
@@ -530,11 +510,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-amber-700 {
-  --tw-text-opacity: 1;
-  color: rgb(180 83 9 / var(--tw-text-opacity));
-}
-
 .text-amber-300 {
   --tw-text-opacity: 1;
   color: rgb(252 211 77 / var(--tw-text-opacity));
@@ -543,11 +518,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-amber-600 {
   --tw-text-opacity: 1;
   color: rgb(217 119 6 / var(--tw-text-opacity));
-}
-
-.text-amber-900 {
-  --tw-text-opacity: 1;
-  color: rgb(120 53 15 / var(--tw-text-opacity));
 }
 
 .text-red-700 {
@@ -576,16 +546,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-size: 60px;
   }
 
-  .sm\:text-\[12px\] {
-    font-size: 12px;
-  }
-
   .sm\:text-\[120px\] {
     font-size: 120px;
-  }
-
-  .sm\:text-\[300px\] {
-    font-size: 300px;
   }
 
   .sm\:text-\[160px\] {
@@ -598,24 +560,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
-  .md\:text-\[85px\] {
-    font-size: 85px;
-  }
-
-  .md\:text-\[80px\] {
-    font-size: 80px;
-  }
-
   .md\:text-\[75px\] {
     font-size: 75px;
   }
 
   .md\:text-\[150px\] {
     font-size: 150px;
-  }
-
-  .md\:text-\[200px\] {
-    font-size: 200px;
   }
 
   .md\:text-\[180px\] {
@@ -632,11 +582,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-size: 200px;
   }
 
-  .lg\:text-\[300px\] {
-    font-size: 300px;
-  }
-
   .lg\:text-\[260px\] {
     font-size: 260px;
+  }
+
+  .lg\:text-\[300px\] {
+    font-size: 300px;
   }
 }

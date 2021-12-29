@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://livejs.com/live.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="js/fireworks.js" defer></script>
     <script src="js/timer.js" defer></script>
-</head>
-<body class="bg-slate-900 font-bungee">
-    
+  </head>
+  <body class="bg-slate-900 font-bungee">
     <canvas class="w-screen h-screen fixed -z-20" id="fireworks"></canvas>
     <div class="backdrop-blur-sm w-screen h-screen fixed -z-10"></div>
-    <div class="grid place-content-center lg:text-[100px] md:text-[75px] sm:text-[60px] text-[50px] w-screen h-screen text-center countdown text-white" id="part1">
-        <div>
-            <span class="days"></span> Days
-        </div>
-        <div>
-            <span class="hours"></span> Hours
-        </div>
-        <div>
-            <span class="minutes"></span> Minutes
-        </div>
-        <div>
-            <span class="seconds"></span> Seconds
-        </div>
+    <div
+      class="grid place-content-center lg:text-[100px] md:text-[75px] sm:text-[60px] text-[50px] w-screen h-screen text-center countdown text-white"
+      id="part1"
+    >
+      <div><span class="days"></span> Days</div>
+      <div><span class="hours"></span> Hours</div>
+      <div><span class="minutes"></span> Minutes</div>
+      <div><span class="seconds"></span> Seconds</div>
     </div>
-    <div class="grid place-content-center lg:text-[200px] md:text-[150px] sm:text-[120px] text-[100px] w-screen h-screen text-center countdown text-amber-300" id="part2">
-        <div>
-            <span class="hours"></span>:<span class="minutes"></span>:<span class="seconds"></span>
-        </div>
+    <div
+      class="grid place-content-center lg:text-[200px] md:text-[150px] sm:text-[120px] text-[100px] w-screen h-screen text-center countdown text-amber-300"
+      id="part2"
+    >
+      <div>
+        <span class="hours"></span>:<span class="minutes"></span>:<span
+          class="seconds"
+        ></span>
+      </div>
     </div>
-    <div class="grid place-content-center lg:text-[200px] md:text-[150px] sm:text-[120px] text-[100px] w-screen h-screen text-center countdown text-amber-600" id="part3">
-        <div>
-            <span class="minutes"></span>:<span class="seconds"></span>
-        </div>
+    <div
+      class="grid place-content-center lg:text-[200px] md:text-[150px] sm:text-[120px] text-[100px] w-screen h-screen text-center countdown text-amber-600"
+      id="part3"
+    >
+      <div><span class="minutes"></span>:<span class="seconds"></span></div>
     </div>
-    <div class="grid place-content-center lg:text-[260px] md:text-[180px] sm:text-[160px] text-[120px] w-screen h-screen text-center countdown text-red-700" id="part4">
-        <div>
-            <span class="minutes"></span>:<span class="seconds"></span>
-        </div>
+    <div
+      class="grid place-content-center lg:text-[260px] md:text-[180px] sm:text-[160px] text-[120px] w-screen h-screen text-center countdown text-red-700"
+      id="part4"
+    >
+      <div><span class="minutes"></span>:<span class="seconds"></span></div>
     </div>
-    <div class="grid place-content-center lg:text-[300px] md:text-[180px] sm:text-[160px] text-[120px] w-screen h-screen text-center countdown text-teal-500" id="part5">
-        <div>
-            <span class="seconds"></span>
-        </div>
-        <div class="lg:text-[100px] md:text-[75px] sm:text-[60px] text-[50px]">Seconds</div>
+    <div
+      class="grid place-content-center lg:text-[300px] md:text-[180px] sm:text-[160px] text-[120px] w-screen h-screen text-center countdown text-teal-500"
+      id="part5"
+    >
+      <div>
+        <span class="seconds"></span>
+      </div>
+      <div class="lg:text-[100px] md:text-[75px] sm:text-[60px] text-[50px]">
+        Seconds
+      </div>
     </div>
-    <div class="grid place-content-center text-center countdown w-screen h-screen text-cyan-600 lg:text-[100px] md:text-[75px] sm:text-[50px] text-[40px]" id="part6">
-        <div>Happy New Year!</div>
-        <div>Have a wonderful 2022!</div>
+    <div
+      class="grid place-content-center text-center countdown w-screen h-screen text-cyan-600 lg:text-[100px] md:text-[75px] sm:text-[50px] text-[40px]"
+      id="part6"
+    >
+      <div>Happy New Year!</div>
+      <div>Have a wonderful 2022!</div>
     </div>
-</body>
+  </body>
 </html>

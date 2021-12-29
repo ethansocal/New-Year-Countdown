@@ -1,11 +1,11 @@
 module.exports = {
-    content: ["./public/**/*.{html,js}"],
-    theme: {
-        extend: {
-            fontFamily: {
-                "bungee": ["Bungee", "cursive"]
-            }
-        },
+  content: ["./public/**/*.{html,js}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        bungee: ["Bungee", "cursive"],
+      },
     },
-    plugins: [],
-}
+  },
+  plugins: [],
+};
