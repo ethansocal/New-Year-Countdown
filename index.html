@@ -14,12 +14,19 @@
     <script src="js/debug.js" defer></script>
   </head>
   <body class="bg-slate-900 font-bungee overflow-hidden">
+    <!-- 
+      Welcome to Ethan's New Year Countdown! If you want to contribute,
+      feel free to fork this project on GitHub. Debugging shortcuts:
+      1-6: Change to specified part
+      F: Toggle fireworks
+      R: Reset debugging modfifiers
+    -->
     <canvas class="w-screen h-screen fixed -z-20" id="fireworks"></canvas>
     <div class="backdrop-blur-sm w-screen h-screen fixed -z-10"></div>
     <div>
       <div
-      class="grid place-content-center text-[7vw] w-screen h-screen text-center countdown text-white"
-      id="part1"
+        class="grid place-content-center text-[7vw] w-screen h-screen text-center countdown text-white"
+        id="part1"
       >
         <div><span class="days"></span> Days</div>
         <div><span class="hours"></span> Hours</div>
@@ -27,8 +34,8 @@
         <div><span class="seconds"></span> Seconds</div>
       </div>
       <div
-      class="grid place-content-center w-screen h-screen text-center text-[15vw] countdown text-amber-300"
-      id="part2"
+        class="grid place-content-center w-screen h-screen text-center text-[15vw] countdown text-amber-300"
+        id="part2"
       >
         <div>
           <span class="hours"></span>:<span class="minutes"></span>:<span

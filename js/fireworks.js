@@ -90,7 +90,10 @@ function createFirework(xLocation = undefined, yLocation = undefined) {
   xPoint = xLocation || Math.random() * (w - 200) + 100;
   yPoint = yLocation || Math.random() * (h - 200) + 100;
   const nFire = Math.random() * 50 + 100;
-  const c = `rgb(${~~(Math.random() * 200 + 55)},${~~(Math.random() * 200 + 55)},${~~(Math.random() * 200 + 55)})`
+  const c = `rgb(${~~(Math.random() * 200 + 55)},${~~(
+    Math.random() * 200 +
+    55
+  )},${~~(Math.random() * 200 + 55)})`;
   for (let i = 0; i < nFire; i++) {
     const particle = new Particle();
     particle.color = c;
