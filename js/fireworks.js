@@ -1,12 +1,15 @@
 let fireworks = false;
 
 function startFireworks() {
-  fireworks = true;
-  canvas = document.getElementById("fireworks");
-  ctx = canvas.getContext("2d");
-  resizeCanvas();
-
-  window.requestAnimationFrame(updateWorld);
+  if (fireworks !== true) {
+    fireworks = true;
+    canvas = document.getElementById("fireworks");
+    ctx = canvas.getContext("2d");
+    resizeCanvas();
+    if (particles.length < 1) {
+      window.requestAnimationFrame(updateWorld);
+    }
+  }
 }
 
 function stopFireworks() {

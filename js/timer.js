@@ -1,4 +1,4 @@
-const override = false;
+let override = false;
 
 function timeLeft() {
   let now = new Date();
@@ -25,19 +25,25 @@ function addClass(element, className) {
 }
 
 function activatePart(part) {
+  if (part === 6) {
+    startFireworks();
+  } else {
+    stopFireworks();
+  }
   document.querySelectorAll(".countdown").forEach((element) => {
     if (!element.id.includes("part" + part.toString())) {
       addClass(element, "!hidden");
     }
   });
-  removeClass(document.querySelector("#part" + part.toString()), "hidden");
+  removeClass(document.querySelector("#part" + part.toString()), "!hidden");
 }
 
 function setupScreen() {
   const [days, hours, minutes, seconds] = timeLeft();
-  if (days > 358) {
+  if (override === true) {
+    return;
+  } else if (days > 358) {
     activatePart(6);
-    startFireworks();
   } else if (days !== 0) {
     activatePart(1);
   } else if (hours !== 0) {
@@ -83,4 +89,3 @@ function refresh() {
 }
 
 setInterval(refresh, 1000 / 60);
-document.addEventListener("keypress");
