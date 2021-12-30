@@ -1,3 +1,5 @@
+/*global activatePart, refresh, fireworks, override, startFireworks*/
+
 document.addEventListener("keydown", (e) => {
   if (e.key === "r") {
     refresh();
@@ -11,4 +13,3 @@ document.addEventListener("keydown", (e) => {
     }
   }
 });
-  
