@@ -1,9 +1,11 @@
+/*global startFireworks, stopFireworks*/
+
 let override = false;
 
 function timeLeft() {
-  let now = new Date();
-  let newYear = new Date(now.getFullYear() + 1, 0, 1);
-  let secondsLeft = (newYear - now) / 1000;
+  const now = new Date();
+  const newYear = new Date(now.getFullYear() + 1, 0, 1);
+  const secondsLeft = (newYear - now) / 1000;
   return [
     Math.floor(secondsLeft / (60 * 60 * 24)),
     Math.floor((secondsLeft / (60 * 60)) % 24),
@@ -31,11 +33,11 @@ function activatePart(part) {
     stopFireworks();
   }
   document.querySelectorAll(".countdown").forEach((element) => {
-    if (!element.id.includes("part" + part.toString())) {
+    if (!element.id.includes(`part${part}`)) {
       addClass(element, "!hidden");
     }
   });
-  removeClass(document.querySelector("#part" + part.toString()), "!hidden");
+  removeClass(document.querySelector(`#part${part}`), "!hidden");
 }
 
 function setupScreen() {
