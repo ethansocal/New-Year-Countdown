@@ -49,7 +49,7 @@ let canvas,
   yPoint;
 
 function resizeCanvas() {
-  if (!!canvas) {
+  if (Boolean(canvas)) {
     w = canvas.width = window.innerWidth;
     h = canvas.height = window.innerHeight;
   }
@@ -67,7 +67,7 @@ function update() {
   if (particles.length < 1000 && Math.random() < probability && fireworks) {
     createFirework();
   }
-  let alive = [];
+  const alive = [];
   for (let i = 0; i < particles.length; i++) {
     if (particles[i].move()) {
       alive.push(particles[i]);
@@ -89,8 +89,8 @@ function paint() {
 function createFirework(xLocation = undefined, yLocation = undefined) {
   xPoint = xLocation || Math.random() * (w - 200) + 100;
   yPoint = yLocation || Math.random() * (h - 200) + 100;
-  let nFire = Math.random() * 50 + 100;
-  let c =
+  const nFire = Math.random() * 50 + 100;
+  const c =
     "rgb(" +
     ~~(Math.random() * 200 + 55) +
     "," +
@@ -99,9 +99,9 @@ function createFirework(xLocation = undefined, yLocation = undefined) {
     ~~(Math.random() * 200 + 55) +
     ")";
   for (let i = 0; i < nFire; i++) {
-    let particle = new Particle();
+    const particle = new Particle();
     particle.color = c;
-    let vy = Math.sqrt(25 - particle.vx * particle.vx);
+    const vy = Math.sqrt(25 - particle.vx * particle.vx);
     if (Math.abs(particle.vy) > vy) {
       particle.vy = particle.vy > 0 ? vy : -vy;
     }
