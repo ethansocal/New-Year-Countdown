@@ -62,27 +62,34 @@ function setupScreen() {
 }
 
 function updateTimes() {
+  const [days, hours, minutes, seconds] = timeLeft();
   document.querySelectorAll(".days").forEach((element) => {
-    element.textContent = timeLeft()[0];
+    element.textContent = days;
   });
   document.querySelectorAll(".hours").forEach((element) => {
-    element.textContent = timeLeft()[1].toLocaleString("en-US", {
+    element.textContent = hours.toLocaleString("en-US", {
       minimumIntegerDigits: 2,
       useGrouping: false,
     });
   });
   document.querySelectorAll(".minutes").forEach((element) => {
-    element.textContent = timeLeft()[2].toLocaleString("en-US", {
+    element.textContent = minutes.toLocaleString("en-US", {
       minimumIntegerDigits: 2,
       useGrouping: false,
     });
   });
   document.querySelectorAll(".seconds").forEach((element) => {
-    element.textContent = timeLeft()[3].toLocaleString("en-US", {
+    element.textContent = seconds.toLocaleString("en-US", {
       minimumIntegerDigits: 2,
       useGrouping: false,
     });
   });
+
+  document.querySelector("#days-label").textContent = `Day${(days === 1 ? "" : "s")}`;
+  document.querySelector("#hours-label").textContent = `Hour${(hours === 1 ? "" : "s")}`;
+  document.querySelector("#minutes-label").textContent = `Minute${(minutes === 1 ? "" : "s")}`;
+  document.querySelector("#seconds-label").textContent = `Second${(seconds === 1 ? "" : "s")}`;
+
 }
 
 function refresh() {
