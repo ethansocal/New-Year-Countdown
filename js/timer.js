@@ -85,11 +85,18 @@ function updateTimes() {
     });
   });
 
-  document.querySelector("#days-label").textContent = `Day${(days === 1 ? "" : "s")}`;
-  document.querySelector("#hours-label").textContent = `Hour${(hours === 1 ? "" : "s")}`;
-  document.querySelector("#minutes-label").textContent = `Minute${(minutes === 1 ? "" : "s")}`;
-  document.querySelector("#seconds-label").textContent = `Second${(seconds === 1 ? "" : "s")}`;
-
+  document.querySelector("#days-label").textContent = `Day${
+    days === 1 ? "" : "s"
+  }`;
+  document.querySelector("#hours-label").textContent = `Hour${
+    hours === 1 ? "" : "s"
+  }`;
+  document.querySelector("#minutes-label").textContent = `Minute${
+    minutes === 1 ? "" : "s"
+  }`;
+  document.querySelector("#seconds-label").textContent = `Second${
+    seconds === 1 ? "" : "s"
+  }`;
 }
 
 function refresh() {
