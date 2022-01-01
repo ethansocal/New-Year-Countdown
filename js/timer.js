@@ -6,7 +6,7 @@ let last = undefined;
 function timeLeft() {
   const now = new Date();
   const newYear = new Date(now.getFullYear() + 1, 0, 1);
-  const secondsLeft = ((newYear - now) / 1000) + 1;
+  const secondsLeft = (newYear - now) / 1000 + 1;
   return [
     Math.floor(secondsLeft / (60 * 60 * 24)),
     Math.floor((secondsLeft / (60 * 60)) % 24),
