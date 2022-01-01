@@ -1,6 +1,7 @@
 /*global startFireworks, stopFireworks*/
 
 let override = false;
+let last = undefined;
 
 function timeLeft() {
   const now = new Date();
@@ -51,7 +52,7 @@ function setupScreen() {
   } else if (hours !== 0) {
     activatePart(2);
   } else if (minutes !== 0) {
-    if (minutes > 10) {
+    if (minutes > 4) {
       activatePart(3);
     } else {
       activatePart(4);
@@ -97,6 +98,13 @@ function updateTimes() {
   document.querySelector("#seconds-label").textContent = `Second${
     seconds === 1 ? "" : "s"
   }`;
+
+  if (last !== undefined && last !== seconds) {
+    let tick = new Audio("./tick.mp3");
+    tick.volume = 0.1;
+    tick.play();
+  }
+  last = seconds;
 }
 
 function refresh() {
